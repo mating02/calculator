@@ -32,14 +32,37 @@ body, .flex-container{
     margin-bottom: 10px;
 }
 
+@font-face {
+    font-family: 'calc font';
+    src: url('calculator.ttf') format('woff2');
+}
 .display {
     display:flex;
     background-color: rgb(11, 79, 11);
-    padding-bottom: 30px;
-    padding-top: 30px;
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 4px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 78px;
+    padding-left: 10px;
+    padding-top: 6px;
+    position: relative;
+    font-family: 'calc font', sans-serif;
+}
+
+#displayVal {
+    font-size: 28px;
+    font-weight: 250;
+}
+
+#result {
+    font-size: 38px;
+    font-weight: 550;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
 }
 
 .grid {
@@ -62,6 +85,7 @@ body, .flex-container{
 button {
     width: 35px;
     height: 20px;
+    background-color: aliceblue;
 }
 
 .lastBtn {
@@ -69,4 +93,8 @@ button {
     justify-content: flex-end;
     padding-right: 20px;
     padding-bottom: 10px;
+}
+
+button:hover {
+    background-color: grey;
 }

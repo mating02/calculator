@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <script src="calc.js"></script>
+    <title>Document</title>
+    <script src="calc.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,32 +12,33 @@
         <div class="calculator">
             <div class="brand">Texas Instruments</div>
             <div class="display">
+                <div id="displayVal"></div>
                 <div id="result">0</div>
             </div>
             <div class="grid">
                 <div class="col 1">
-                    <button value="7">7</button>
-                    <button value="4">4</button>
-                    <button value="1">1</button>
-                    <button value=".">.</button>
+                    <button class="num" value="7">7</button>
+                    <button class="num" value="4">4</button>
+                    <button class="num" value="1">1</button>
+                    <button id="decimal" value=".">.</button>
                 </div>
                 <div class="col 2">
-                    <button value="8">8</button>
-                    <button value="5">5</button>
-                    <button value="2">2</button>
-                    <button value="0">0</button>
+                    <button class="num" value="8">8</button>
+                    <button class="num" value="5">5</button>
+                    <button class="num" value="2">2</button>
+                    <button class="num" value="0">0</button>
                 </div>
                 <div class="col 3">
-                    <button value="9">9</button>
-                    <button value="6">6</button>
-                    <button value="3">3</button>
-                    <button value="=">=</button>
+                    <button class="num" value="9">9</button>
+                    <button class="num" value="6">6</button>
+                    <button class="num" value="3">3</button>
+                    <button id="equals" value="=">=</button>
                 </div>
                 <div class="col 4">
-                    <button value="+">+</button>
-                    <button value="-">-</button>
-                    <button value="*">&times;</button>
-                    <button value="/">&divide;</button> 
+                    <button class="op" value="+">+</button>
+                    <button class="op" value="-">-</button>
+                    <button class="op" value='×'>&times;</button>
+                    <button class="op" value='÷'>&divide;</button> 
                 </div>
             </div>
             <div class="lastBtn">

@@ -70,7 +70,7 @@ operations.forEach((op) => {
         else {
             if (displayValue.split(' ').length === 3) {
                 const arr = displayValue.split(' ');
-                displayValue = operate(parseFloat(arr[0]), parseFloat(arr[2]), arr[1]).toFixed(3);
+                displayValue = (Math.round(operate(parseFloat(arr[0]), parseFloat(arr[2]), arr[1]) * 1000) / 1000).toString();
                 res.textContent = displayValue;
             }
             displayValue += ' ' + op.value + ' ';
@@ -82,7 +82,7 @@ operations.forEach((op) => {
 
 equal.addEventListener('click', () => {
     const arr = displayValue.split(' ');
-    res.textContent = operate(parseFloat(arr[0]), parseFloat(arr[2]), arr[1]).toFixed(3);
+    res.textContent = (Math.round(operate(parseFloat(arr[0]), parseFloat(arr[2]), arr[1]) * 1000) / 1000).toString();
     displayValue = res.textContent;
     checkValue = res.textContent;
 });
